@@ -1,0 +1,229 @@
+/* Common CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 2px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 70px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 16px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+header .social-icons {
+    margin-right: 30px;
+}
+
+header .social-icons a {
+    margin-left: 10px;
+}
+
+header .social-icons img {
+    height: 24px;
+}
+
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    right: 20px;
+}
+
+#click {
+    display: none;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 700px;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    width: 400px;
+    background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+    padding: 5px;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    background-color: #a2a99e;
+    padding: 20px;
+}
+
+.info .info-box {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+}
+
+.services {
+    background-color: #f3f3f3;
+    text-align: center;
+    margin: 50px 0;
+    font-weight: bold;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+    text-align: start;
+    margin-left: 42px;
+    font-size: 2rem;
+}
+
+.service {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    text-align: start;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+}
+.h3_main2{
+
+    text-align: center;
+}
+.h3_main3{
+    text-align: end;
+}
+
+
+.service h3 {
+    margin: 10px 0;
+}
+
+.service p {
+    margin: 10px 0 20px;
+}
+
+.service .btn {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+    .info, .services {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-text {
+        width: auto;
+    }
+
+    .info .info-box, .service {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .nav-links {
+        position: fixed;
+        z-index: 100;
+        top: 70px;
+        left: -100%;
+        background: #111;
+        height: 65vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: left 0.3s ease;
+        
+    }
+    header nav ul li a:hover{
+        color: white;
+        background: #a2a99e;
+        padding: 10px;
+    }
+
+    #click:checked + .menu-btn + nav .nav-links {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 30px 0;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+        color: #e0e0e0;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .social-icons {
+        display: block;
+        margin-right: 40px;
+        margin-top: 5px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
